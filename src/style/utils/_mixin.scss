@@ -1,0 +1,54 @@
+@use "../utils/variables" as *;
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin double-line {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: $border-radius;
+    background-color: $Pastel-Yellow;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 130px;
+    height: 2px;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: $border-radius;
+    background-color: $Pastel-Yellow;
+  }
+}
+
+@mixin button-style {
+  font-weight: 500;
+  font-size: 18px;
+  color: $white;
+  background-color: $Deep-Green;
+  width: 200px;
+  border-radius: $border-radius;
+}

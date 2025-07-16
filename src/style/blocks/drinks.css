@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn,
+button {
+  border: none;
+  background: none;
+}
+
+input {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li::marker {
+  color: #fddd5b;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+}
+
+.nav-link {
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.main {
+  min-height: 100vh;
+  margin-left: 280px;
+  background-color: #000;
+  width: 100%;
+  padding: 2rem;
+}
+.main__header {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__header-title {
+  font-weight: bold;
+}
+.main__header-leftside {
+  color: #fff;
+  padding: 10px;
+}
+.main__header-rightside {
+  width: 70%;
+}
+.main__header-form-button {
+  background-color: #fddd5b;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+.main__back-link {
+  cursor: pointer;
+  color: #fddd5b;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.active {
+  background-color: #fddd5b !important;
+  color: #000 !important;
+}
+
+.card__link-show {
+  background-color: #fddd5b !important;
+  color: #000 !important;
+  width: 130px;
+  font-weight: 500;
+}
+.card__buttons {
+  gap: 10px;
+}
+.card__icons-like, .card__icons-more {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto 0;
+}
+.card__actions {
+  position: absolute;
+  bottom: -45px;
+  right: 10px;
+  width: 100px;
+  padding: 7px;
+  font-size: 17px;
+  background-color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  z-index: 3;
+}
+.card__button {
+  text-align: start;
+  width: 100%;
+  padding-left: 5px;
+}
+.card__button:hover {
+  background-color: rgba(143, 139, 139, 0.4117647059);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__body-info {
+  width: 100%;
+}
+
+.bi-heart-fill {
+  color: #ff002f;
+}
+
+.add__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.add__form-label {
+  font-size: 20px;
+  font-weight: 500;
+}
+.add__form-submit {
+  background-color: #fddd5b;
+  width: 130px;
+  height: 40px;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.add__form-basic {
+  gap: 10px;
+}
+
+input,
+select {
+  height: 50px;
+}
+
+input,
+select,
+textarea {
+  border-radius: 5px;
+}
+
+.addrow {
+  position: absolute;
+  color: #fddd5b;
+  font-size: 40px;
+  font-weight: bold;
+  right: 0;
+  top: -13px;
+}
+
+.drinks__allsections {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #fddd5b;
+}
+.drinks__allsections-title {
+  background-color: #fddd5b;
+  font-size: 23px;
+  border-radius: 15px;
+}
+.drinks__allsections-firstsection, .drinks__allsections-secondsection {
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  gap: 2rem;
+}
+.drinks__allsections-secondsection {
+  display: flex;
+  flex-direction: column;
+}
+.drinks__Ingredients, .drinks__Instructions {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 23px;
+  border-bottom: 2px solid #fddd5b;
+}
+.drinks__image {
+  border-radius: 15px;
+}
+.drinks__info-name {
+  color: #000 !important;
+  font-size: 23px;
+  margin: 10px;
+}
+.drinks__info-category {
+  font-size: 17px;
+  background-color: rgba(253, 221, 91, 0.8705882353);
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 100px;
+}
+
+.table {
+  border-color: #fddd5b;
+}
+
+.my-confirm-btn {
+  background-color: #fddd5b !important;
+  outline: none !important;
+  color: #000 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.my-cancel-btn {
+  color: #000 !important;
+  background-color: rgba(143, 139, 139, 0.4117647059) !important;
+}
+
+.my-black-title {
+  font-size: 20px;
+  color: #000 !important;
+}
+
+@media (max-width: 991px) {
+  .main__header {
+    display: flex;
+    flex-direction: column;
+  }
+  .add__form {
+    width: 100% !important;
+  }
+  .add__form-basic {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.show {
+  opacity: 1;
+}
+
+@media (max-width: 650px) {
+  .main__header-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
+  .main__header-form-button {
+    height: 40px;
+  }
+  .drinks__image {
+    width: 25vw !important;
+  }
+  .drinks__allsections-firstsection {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=drinks.css.map */

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A website dedicated to drink lovers! It offers a unique interactive experience to discover, learn, and try out a wide variety of drink recipes from around the world — from refreshing natural juices, to creative mocktails, and classic hot beverages."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <!-- icons -->
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./src/style/blocks/index.css" />
+    <title>Fresh</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fs-2 fw-bold" href="#"
+          ><img src="./src/assest/image/logo.png" alt="logo" width="150"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link fs-5 active" href="#">Home</a>
+            <a class="nav-link fs-5" href="#about">About</a>
+            <a class="nav-link fs-5" href="./src/pages/alldrinks.html"
+              >Drinks</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <section class="main__banner">
+        <img
+          class="main__banner-image"
+          src="./src/assest/image/banner.jpg"
+          alt="cup of lemon "
+        />
+        <p class="main__banner-description">
+          Sip by sip, discover the taste of life
+        </p>
+      </section>
+      <section class="container main__about" id="about">
+        <h2 class="main__about-title">About us</h2>
+        <div class="main__about-content">
+          <div class="main__about-leftside">
+            <p class="main__about-text">
+              We offer a wide variety of hot and cold drinks, featuring unique
+              flavors and 100% natural ingredients, designed to suit every taste
+              and add a refreshing touch to every moment. But that’s not all —
+              you can also add your own special drink, share your recipe, and
+              let others try it! The site is designed to be interactive,
+              providing you with an enjoyable and easy experience that lets you
+              explore new drinks, save your favorites, and create your own
+              unique flavors in your own style. Whether you’re a coffee lover, a
+              fan of natural juices, or even have your own exotic drinks, here
+              you’ll find a space to express your taste and share your passion
+              with every sip.
+            </p>
+            <a href="./src/pages/alldrinks.html"
+              ><button class="main__about-explore" id="drink">
+                Explore Drinks
+              </button></a
+            >
+          </div>
+          <div class="main__about-rightside">
+            <div class="main__about-firstimage">
+              <img
+                class="main__about-image"
+                src="./src/assest/image/image1.jpeg"
+                alt="drink image"
+                width="230"
+              />
+            </div>
+            <div class="main__about-secondimage">
+              <img
+                class="main__about-image"
+                src="./src/assest/image/image2.jpeg"
+                alt="drink image"
+                width="230"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container main__whyfresh">
+        <h2 class="main__whyfresh-title">Why Fresh?</h2>
+        <div class="main__reasons"></div>
+      </section>
+
+      <section class="container main__note">
+        <h2 class="main__note-title">Have a Note?</h2>
+        <form class="main__note-form">
+          <textarea
+            class="p-2"
+            name="note"
+            placeholder="Message"
+            cols="100"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit" class="main__note-button">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer text-center py-4">
+      Sip & Savor © 2025. All rights reserved
+    </footer>
+    <script src="./src/js/index.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

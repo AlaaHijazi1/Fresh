@@ -1,0 +1,201 @@
+[
+  {
+    "id": 0,
+    "name": "Strawberry Smoothie",
+    "category": "Cold",
+    "image": "https://i.postimg.cc/QC80cs3p/Strawberry-Banana-Smoothie-Simply-Made-Recipes.jpg",
+    "ingredients": [
+      "2 cups unsweetened frozen strawberries",
+      "1/2 cup cranberry and raspberry juice",
+      "1/4 cup orange juice",
+      "2 large fresh strawberries for garnish",
+      "1/2 cup vanilla yogurt"
+    ],
+    "instructions": "Gather the ingredients. Place 2 cups of unsweetened frozen strawberries in the bottom of a blender or food processor fitted with a metal blade. Add 1/2 cup of cranberry and raspberry juice, 1/4 cup of orange juice, and 1/2 cup of vanilla yogurt. Cover and blend immediately until the mixture is smooth, scraping down the sides if needed. Pour the smoothie into glasses and garnish each with a fresh strawberry. Serve immediately."
+  },
+  {
+    "id": 1,
+    "name": "Iced Coffee",
+    "category": "Cold",
+    "image": "https://i.postimg.cc/QMq717xy/Caramel-Hazelnut-Iced-Coffee.jpg",
+    "ingredients": [
+      "Ice cubes",
+      "Sugar to taste",
+      "Cold water or milk (optional)",
+      "1 cup coffee (prepared using an espresso machine or instant coffee)"
+    ],
+    "instructions": "Prepare a cup of black coffee and let it cool. In the cup you will use, add ice cubes. Pour the cold coffee over the ice. Add sugar and stir the ingredients together. You may add milk or just enjoy the cold coffee as is."
+  },
+  {
+    "id": 2,
+    "name": "Lemon Mint Juice",
+    "category": "Natural Juice",
+    "image": "https://i.postimg.cc/3wLgzp5D/Limonana-Frozen-Mint-Lemonade.jpg",
+    "ingredients": [
+      "2 lemons",
+      "10 mint leaves",
+      "Sugar to taste",
+      "1.5 cups cold water"
+    ],
+    "instructions": "Cut the lemons in half and squeeze them to get about 1 cup of lemon juice. Strain the juice (if using a juicer). You can use the pulp, but make sure to remove any seeds. In a blender, combine the lemon juice with the pulp, water, sugar, and mint leaves. Blend on high speed until the mint leaves are fully mixed and the mixture is smooth."
+  },
+  {
+    "id": 3,
+    "name": "Avocado Shake",
+    "category": "Milkshake",
+    "image": "https://i.postimg.cc/5tGXwmWp/Get-a-boost-with-an-inspiring-avocado-smoothie.jpg",
+    "ingredients": [
+      "1 cup milk",
+      "1/2 cup sweetened condensed milk, plus more to taste",
+      "2 cups crushed ice",
+      "2 ripe Hass avocados, pitted"
+    ],
+    "instructions": "Blend the milk, sweetened condensed milk, and ice in a blender until very smooth. Add the avocado flesh and blend again until smooth. The mixture will be quite thick; add cold water a few tablespoons at a time, blending after each addition, until the mixture is pourable. Taste the mixture and add more sweetened condensed milk if you want it sweeter. Serve in chilled glasses with straws."
+  },
+  {
+    "id": 4,
+    "name": "Mango Shake",
+    "category": "Milkshake",
+    "image": "https://i.postimg.cc/VvVxL4rQ/Mango-Lassi-einfach-selber-machen.jpg",
+    "ingredients": [
+      "2 large ripe mangoes (about 2 cups chopped mango)",
+      "1½ cups milk",
+      "1½ tablespoons sugar (or to taste)",
+      "2-3 ice cubes (optional)"
+    ],
+    "instructions": "Wash the mangoes, peel them, cut them into small pieces, and remove the pit. Transfer the pieces to a blender jar. Add the milk, sugar (according to taste or depending on the sweetness of the mangoes), and ice cubes. Blend until the mixture becomes smooth and creamy without any mango chunks. Pour the prepared mango shake into serving glasses, garnish with almonds and a scoop of ice cream, then serve."
+  },
+  {
+    "id": 5,
+    "name": "Hot Chocolate",
+    "category": "Hot",
+    "image": "https://i.postimg.cc/3NQkdjP6/Mocha-recipe.jpg",
+    "ingredients": [
+      "2½ cups milk",
+      "2 tablespoons unsweetened cocoa powder",
+      "3 tablespoons sugar"
+    ],
+    "instructions": "Mix the cocoa powder and sugar together, making sure to sift the cocoa powder to remove any lumps. Add the milk to the cocoa and sugar mixture, and stir well. Transfer the mixture to a saucepan over heat, stirring constantly until fully dissolved and the mixture is well combined. Pour the hot chocolate drink into serving cups and garnish with chocolate powder."
+  },
+  {
+    "id": 6,
+    "name": "Orange Juice",
+    "category": "Natural Juice",
+    "image": "https://i.postimg.cc/Z5QpJN5k/Zesty-Orange-Smoothie-Bliss.jpg",
+    "ingredients": [
+      "5 medium-sized oranges (or available amount)",
+      "1 cup ice cubes",
+      "Sugar or honey (as desired)"
+    ],
+    "instructions": "Wash the oranges thoroughly, then peel them. Slice the oranges crosswise and place them in the blender. Add ice cubes and the desired amount of sugar or honey, or skip sweeteners if preferred. Blend the ingredients well, then strain the juice to remove any pulp or seeds. Refrigerate the orange juice and enjoy it when desired."
+  },
+  {
+    "id": 7,
+    "name": "Banana Milkshake",
+    "category": "Milkshake",
+    "image": "https://i.postimg.cc/KzfnSHKf/The-Best-Ever-Banana-Milkshake-by-samaneh-k.jpg",
+    "ingredients": [
+      "2 large ripe bananas",
+      "75g vanilla ice cream",
+      "1/2 tsp ground cinnamon, plus extra to serve",
+      "300ml milk"
+    ],
+    "instructions": "Peel and slice the bananas, then place them in a freezer box or bag and freeze for about an hour until nearly frozen. Meanwhile, prepare the topping by whisking the cream together with the vanilla paste and maple syrup until it holds firm peaks. Scoop the whipped cream into a piping bag fitted with a large star nozzle and chill until ready to use. To make the milkshake, tip the frozen banana slices into a blender, then add the ice cream, cinnamon, and milk and blend on high speed until smooth. Alternatively, you can combine the ingredients using a hand-held stick blender in a bowl. Divide the milkshake between two tall glasses and pipe a swirl of the whipped cream topping onto each one. Scatter with cinnamon and grated dark chocolate if liked, and serve immediately."
+  },
+  {
+    "id": 8,
+    "name": "Watermelon Juice",
+    "category": "Natural Juice",
+    "image": "https://i.postimg.cc/kD3Mjnnp/watermelon-juice-with-the-garnish-of-Mint.jpg",
+    "ingredients": [
+      "2 cups watermelon, diced",
+      "1 cup water (or coconut water)",
+      "1 tablespoon simple syrup or granulated sugar, to taste",
+      "Lemon juice (optional)"
+    ],
+    "instructions": "Add the watermelon cubes and water to the blender and blend until smooth. If you prefer a thinner consistency, add more water, or add some ice for a slushier texture. Depending on the sweetness of the watermelon, you can sweeten the drink with simple syrup or sugar, and you can also add refreshing lemon juice to enhance the flavor."
+  },
+  {
+    "id": 9,
+    "name": "Matcha Latte",
+    "category": "Cold",
+    "image": "https://i.postimg.cc/vT9x82TC/Iced-Matcha-Latte.jpg",
+    "ingredients": [
+      "2 teaspoons green matcha tea powder",
+      "0.5 cup boiling water",
+      "1.5 cups milk",
+      "1 tablespoon liquid honey"
+    ],
+    "instructions": "In a cup, mix the matcha powder with the hot water. Heat the milk in a pot and whisk it until smooth and frothy. Pour the milk over the matcha mixture, sprinkle a little matcha powder on top, and serve immediately."
+  },
+  {
+    "id": 10,
+    "name": "Chai Tea",
+    "category": "Hot",
+    "image": "https://i.postimg.cc/4Ngmb5mN/Karak-Chai.jpg",
+    "ingredients": [
+      "2 chai tea bags",
+      "1/4 cup hot water (slightly boiled)",
+      "3/4 cup whole milk (or oat milk)",
+      "Vanilla powder, sugar, or honey to taste (optional)",
+      "Cinnamon or nutmeg for sprinkling on top (optional)"
+    ],
+    "instructions": "Steep the tea according to the instructions on the package. Heat the milk in a pot and whisk it using a blender until frothy. Mix the milk with the tea, and add vanilla powder, honey, or sugar to taste for sweetness. Sprinkle cinnamon or nutmeg on top if desired, then serve."
+  },
+  {
+    "id": 11,
+    "name": "Coconut Water",
+    "category": "Cold",
+    "image": "https://i.postimg.cc/Z5qYVDZZ/Stay-Hydrated-Stay-Fresh.jpg",
+    "ingredients": [
+      "2 coconuts",
+      "3 tablespoons sugar",
+      "1 tablespoon sweetened condensed milk",
+      "4 cups ice"
+    ],
+    "instructions": "Cut the coconuts, then empty the coconut water and cut the coconut flesh into small cubes. In a blender, add the coconut cubes, coconut water, and ice cubes, then blend until smooth. Add the sweetened condensed milk and sugar, and blend again until the mixture is homogeneous. Pour the juice into a container and refrigerate for about an hour until chilled. Remove the juice from the fridge, pour into cups, and serve."
+  },
+  {
+    "id": 12,
+    "name": "Pineapple Juice",
+    "category": "Cold",
+    "image": "https://i.postimg.cc/9FRJZcwj/Pineapple-Mint-Fizz.jpg",
+    "ingredients": [
+      "Half a ripe pineapple (regular size) or 1½ cups fresh chopped pineapple",
+      "A pinch of ground black pepper (optional)",
+      "1-2 teaspoons sugar or to taste (optional)",
+      "A pinch of salt (optional)",
+      "Half a cup of water",
+      "5-6 ice cubes"
+    ],
+    "instructions": "Wash the pineapple and remove the outer skin with a long knife. Cut it in half, then take one half and chop it into pieces, keeping the other half for later use. If peeling is difficult, you can use ready pineapple slices—fresh slices are recommended—just chop about one and a half cups of them. Pour half a cup of water into a blender jar or mixer bowl, add the chopped pineapple, and blend until smooth and free of any fruit chunks. Then, place a fine mesh strainer over a large bowl and pour the prepared puree through it."
+  },
+  {
+    "id": 13,
+    "name": "Cinnamon Milk",
+    "category": "Hot",
+    "image": "https://i.postimg.cc/6p6Vzwy3/Recipes.jpg",
+    "ingredients": [
+      "Milk (quantity as desired)",
+      "1 teaspoon fresh ginger paste",
+      "2 pinches cinnamon",
+      "3-4 strands of saffron",
+      "Jaggery to taste"
+    ],
+    "instructions": "Take one glass of milk and add one inch of grated ginger. Brew the blend and add a dash of cinnamon. Strain the milk, then add some honey and a pinch of black pepper. Boil the milk along with one teaspoon of fresh ginger paste, two pinches of cinnamon, three to four strands of saffron, and jaggery. Serve hot."
+  },
+  {
+    "id": 14,
+    "name": "Oreo Milkshake",
+    "category": "Milkshake",
+    "image": "https://i.postimg.cc/02nDz3cq/oreo-milkshake.jpg",
+    "ingredients": [
+      "8 Oreo cookies",
+      "1/4 cup milk",
+      "2 big scoops of ice cream",
+      "6 ice cubes",
+      "Sugar to taste"
+    ],
+    "instructions": "Add the watermelon cubes and water to the blender and blend until smooth. If you prefer a thinner consistency, add more water, or add some ice for a slushier texture. Depending on the sweetness of the watermelon, you can sweeten the drink with simple syrup or sugar, and you can also add refreshing lemon juice to enhance the flavor.In a blender, put 6 Oreo cookies, sugar, milk, ice cubes, and vanilla or chocolate ice cream. Use a powerful blender to crush the ice until smooth. Decorate the serving glass with chocolate sauce and crush 2 Oreo cookies at the bottom of the glass. Pour the milkshake over, and optionally, decorate with whipped cream before serving."
+  }
+]

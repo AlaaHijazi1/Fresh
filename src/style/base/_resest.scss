@@ -1,0 +1,24 @@
+@use "../utils/variables" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn,
+button {
+  border: none;
+  background: none;
+}
+
+input {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li::marker {
+  color: $Pastel-Yellow;
+}

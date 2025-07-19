@@ -18,10 +18,6 @@ Welcome to Fresh, your personal drink manager! Easily add, edit, favorite, and s
 
 ## 🛠️ Built With
 
-- JavaScript
-- HTML5
-- SCSS
-- Bootstrap
-- JSON
-
-
+- Frontend: HTML, Sass, JavaScript, Bootstrap  
+- Storage: Local Storage (for saved drinks) and Session Storage (for temporary form data)  
+- Data: Drinks fetched from a local JSON file  

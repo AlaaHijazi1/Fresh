@@ -1,4 +1,4 @@
-# 🥤 Fresh – Manage All Your Favorite Drinks in One Place
+# 🥤 Fresh – Manage All Your Favorite Drinks
 
 Welcome to Fresh, your personal drink manager! Easily add, edit, favorite, and search through a variety of drinks in a smooth and intuitive interface designed for the best user experience.
 

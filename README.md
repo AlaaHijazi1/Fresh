@@ -1,9 +1,11 @@
 # 🥤 Fresh – Manage All Your Favorite Drinks in One Place
 ---
+
 Welcome to Fresh, your personal drink manager! Easily add, edit, favorite, and search through a variety of drinks in a smooth and intuitive interface designed for the best user experience.
 
 ## ✨ Features
 ---
+
 **Add new drinks easily** – Add your favorite drinks with all details.
 
 **Edit, delete drinks** – Easily change or remove any drink information anytime.
@@ -18,6 +20,7 @@ Welcome to Fresh, your personal drink manager! Easily add, edit, favorite, and s
 
 ## 🛠️ Built With
 ---
+
 - JavaScript
 - HTML5
 - SCSS

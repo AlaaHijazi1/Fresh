@@ -11,7 +11,7 @@ const newChild_innerr = `
         data-bs-placement="right"
         data-bs-original-title="logo"
       >
-        <img src="../assest/image/logo.png" alt="logo" width="70" />
+        <img src="../image/logo.png" alt="logo" width="70" />
       </a>
       <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
         <li class="nav-item">
@@ -48,7 +48,7 @@ div.style.width = "6rem";
 const main = document.querySelector(".main");
 const drinks = document.querySelector(".drinks");
 let links = document.querySelectorAll(".nav-link");
-let activeElement_dataId = null;
+let currentlyActiveNavId = null;
 
 widthOfWindow.addEventListener("change", updateSidebar);
 
@@ -65,8 +65,7 @@ function updateSidebar() {
   } else {
     div.replaceWith(firstChild);
     main.style.marginLeft = "280px";
-    drinks.style.marginTop = "0rem";
-    drinks.style.padding = "3rem";
+    drinks.style.cssText += "margin-top: 0rem; padding: 3rem;";
   }
 
   addNavLinkListeners();
@@ -83,19 +82,20 @@ function addNavLinkListeners() {
     });
   });
 
+  // Update the currently active nav ID based on the active class
   links.forEach((link) => {
     if (link.classList.contains("active")) {
-      activeElement_dataId = link.dataset.id;
+      currentlyActiveNavId = link.dataset.id;
     }
   });
 }
 
+// Activate the currently active link based on its identifier
 function setElementActive() {
   links = document.querySelectorAll(".nav-link");
   links.forEach((link) => {
-    if (link.dataset.id === activeElement_dataId) {
+    if (link.dataset.id === currentlyActiveNavId) {
       link.classList.add("active");
     }
   });
 }
-

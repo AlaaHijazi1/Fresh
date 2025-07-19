@@ -1,4 +1,7 @@
-import { setupDrinkLinksNavigation } from "./search.js";
+import {
+  updateDrinksCount,
+  setupDrinkLinksNavigation,
+} from "./drinks-utils.js";
 
 const cards = document.getElementById("cards");
 
@@ -6,8 +9,75 @@ let likedDrinks = JSON.parse(window.localStorage.getItem("likedDrinks")) || [];
 if (likedDrinks.length > 0) {
   cards.innerHTML = "";
   likedDrinks.forEach((drink) => {
-    const { image, name, id } = drink;
-    const card = `
+    createDrinkCard(drink);
+  });
+
+  /* When clicking on any icon, a confirmation message appears to remove
+  the item from the favorites list, and the item gets removed if confirmed 
+  */
+  cards.addEventListener("click", (e) => {
+    if (e.target.classList.contains("card__icons-like")) {
+      Swal.fire({
+        title: "Remove from favorites?",
+        showCancelButton: true,
+        confirmButtonText: "Yes, remove it!",
+        customClass: {
+          confirmButton: "my-confirm-btn",
+          cancelButton: "my-cancel-btn",
+          title: "my-black-title",
+        },
+      }).then((result) => {
+        if (result.isConfirmed) {
+          e.target.classList.add("bi-heart");
+          e.target.classList.remove("bi-heart-fill");
+          const id = e.target.dataset.id;
+          likedDrinks = likedDrinks.map((drink) => {
+            if (+id === drink.id) {
+              return { ...drink, state: false };
+            }
+            return drink;
+          });
+          const filteredFavorites = likedDrinks.filter((drink) => drink.state);
+          window.localStorage.setItem(
+            "likedDrinks",
+            JSON.stringify(filteredFavorites)
+          );
+          e.target.closest(".col-12").remove();
+          likedDrinks = JSON.parse(window.localStorage.getItem("likedDrinks"));
+          updateDrinksCount(
+            cards,
+            likedDrinks.length,
+            "You have no favorite drinks yet!"
+          );
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            },
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Removed from favorites",
+          });
+        }
+      });
+    }
+  });
+} else {
+  cards.innerHTML = `
+  <div class="w-100 text-center mt-5">
+    <h5>You have no favorite drinks yet!</h5>
+  </div>
+`;
+}
+function createDrinkCard(element) {
+  const { image, name, id } = element;
+  const card = `
           <div
             class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center"
           >
@@ -32,81 +102,12 @@ if (likedDrinks.length > 0) {
             </div>
           </div>
       `;
-    cards.innerHTML += card;
-
-    setupDrinkLinksNavigation("likeddrinks.html");
-
-    const icons = document.querySelectorAll(".card__icons-like");
-    icons.forEach((icon) => {
-      icon.addEventListener("click", () => {
-        Swal.fire({
-          title: "Remove from favorites?",
-          showCancelButton: true,
-          confirmButtonText: "Yes, remove it!",
-          customClass: {
-            confirmButton: "my-confirm-btn",
-            cancelButton: "my-cancel-btn",
-            title: "my-black-title",
-          },
-        }).then((result) => {
-          if (result.isConfirmed) {
-            icon.classList.add("bi-heart");
-            icon.classList.remove("bi-heart-fill");
-            const id = icon.dataset.id;
-            likedDrinks = likedDrinks.map((drink) => {
-              if (+id === drink.id) {
-                return { ...drink, state: false };
-              }
-              return drink;
-            });
-            const favDrinks = likedDrinks.filter((drink) => drink.state);
-            window.localStorage.setItem(
-              "likedDrinks",
-              JSON.stringify(favDrinks)
-            );
-            icon.closest(".col-12").remove();
-
-            likedDrinks = JSON.parse(
-              window.localStorage.getItem("likedDrinks")
-            );
-            numberOfDrinks();
-            const Toast = Swal.mixin({
-              toast: true,
-              position: "top-end",
-              showConfirmButton: false,
-              timer: 2000,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                toast.onmouseenter = Swal.stopTimer;
-                toast.onmouseleave = Swal.resumeTimer;
-              },
-            });
-            Toast.fire({
-              icon: "success",
-              title: "Removed from favorites",
-            });
-          }
-        });
-      });
-    });
-  });
-} else {
-  cards.innerHTML = `
-  <div class="w-100 text-center mt-5">
-    <h5>You have no favorite drinks yet!</h5>
-  </div>
-`;
+  cards.innerHTML += card;
 }
+setupDrinkLinksNavigation("likeddrinks.html");
 
-numberOfDrinks();
-function numberOfDrinks() {
-  const quantity = document.getElementById("quantity");
-  quantity.textContent = `${+likedDrinks.length} Drinks Found`;
-  if (+likedDrinks.length === 0) {
-    cards.innerHTML = `
-  <div class="w-100 text-center mt-5">
-    <h5>You have no favorite drinks yet!</h5>
-  </div>
-`;
-  }
-}
+updateDrinksCount(
+  cards,
+  likedDrinks.length,
+  "You have no favorite drinks yet!"
+);

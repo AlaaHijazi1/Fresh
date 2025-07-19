@@ -1,3 +1,6 @@
+/* Here, I want to get the source page where this drink was clicked from,
+   so that when I go back, I can return to the same page it came from
+*/
 const sourcePage = window.localStorage.getItem("page");
 let allDrinks = "";
 switch (sourcePage) {

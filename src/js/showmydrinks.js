@@ -1,4 +1,7 @@
-import { setupDrinkLinksNavigation } from "./search.js";
+import {
+  updateDrinksCount,
+  setupDrinkLinksNavigation,
+} from "./drinks-utils.js";
 
 let myDrinks = JSON.parse(window.localStorage.getItem("myDrinks")) || [];
 
@@ -6,12 +9,19 @@ const cards = document.getElementById("cards");
 if (myDrinks.length > 0) {
   cards.innerHTML = "";
   myDrinks.forEach((drink) => {
-    showDrinks(drink, cards, myDrinks);
+    createDrinkCard(drink);
   });
+} else {
+  cards.innerHTML = `
+  <div class="w-100 text-center mt-5">
+    <h4>You haven't added any custom drinks yet!</h4>
+  </div>
+`;
+}
 
-  function showDrinks(element, cards, myDrinks) {
-    let { name, image, id } = element;
-    const card = `
+function createDrinkCard(element) {
+  let { name, image, id } = element;
+  const card = `
   <div
             class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center"
           >
@@ -47,16 +57,10 @@ if (myDrinks.length > 0) {
             </div>
           </div>
       `;
-    cards.innerHTML += card;
-    setupDrinkLinksNavigation("mydrinks.html");
-  }
-} else {
-  cards.innerHTML = `
-  <div class="w-100 text-center mt-5">
-    <h4>You haven't added any custom drinks yet!</h4>
-  </div>
-`;
+  cards.innerHTML += card;
 }
+
+setupDrinkLinksNavigation("mydrinks.html");
 
 cards.addEventListener("click", (e) => {
   if (
@@ -86,12 +90,14 @@ cards.addEventListener("click", (e) => {
     e.target.classList.contains("card__button") &&
     e.target.textContent === "Edit"
   ) {
+    sessionStorage.clear();
+    sessionStorage.setItem("cameFromEdit", "true");
     const id = +e.target.dataset.id;
     window.location.href = `../pages/addnewdrinks.html?editId=${id}`;
   }
 });
 
-// هون اذا كبسنا على اي اشي برا خلي يسكرها
+// If the user clicks outside the popup, close it
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".card__icons")) {
     document.querySelectorAll(".card__actions").forEach((action) => {
@@ -99,41 +105,6 @@ document.addEventListener("click", (e) => {
     });
   }
 });
-
-//  هون بظهر البطاقة الي فهيا زر الاضفة والتعديل
-// const moreIcons = document.querySelectorAll(".card__icons-more");
-// const cardActions = document.querySelectorAll(".card__actions");
-// moreIcons.forEach((icon) => {
-//   const action = icon.nextElementSibling;
-
-//   icon.addEventListener("click", () => {
-//     if (action.classList.contains("show")) {
-//       action.classList.remove("show");
-//       return;
-//     }
-//     cardActions.forEach((card) => {
-//       card.classList.remove("show");
-//     });
-//     action.classList.add("show");
-//   });
-// });
-// document.addEventListener("click", (e) => {
-//   if (!e.target.closest(".card__icons")) {
-//     cardActions.forEach((card) => {
-//       card.classList.remove("show");
-//     });
-//   }
-// });
-
-// هون بدي اعمل الفنكشن الخاص بالحذف
-// const cardButtons = document.querySelectorAll(".card__button");
-// cardButtons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     // button.closest(".card__actions").remove();
-//     const id = +button.dataset.id;
-//     deleteDrink(id, button);
-//   });
-// });
 
 function deleteDrink(id, button) {
   Swal.fire({
@@ -154,7 +125,11 @@ function deleteDrink(id, button) {
         JSON.stringify(myDrinksAfterDeleted)
       );
       myDrinks = JSON.parse(window.localStorage.getItem("myDrinks"));
-      numberOfDrinks();
+      updateDrinksCount(
+        cards,
+        myDrinks.length,
+        "You haven't added any custom drinks yet!"
+      );
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -173,6 +148,7 @@ function deleteDrink(id, button) {
     }
   });
 
+  // If the deleted item was liked, update the liked items and remove it from the liked list
   let likedDrinks = JSON.parse(localStorage.getItem("likedDrinks")) || [];
   const likedIndex = likedDrinks.findIndex((drink) => +drink.id === +id);
   if (likedIndex !== -1) {
@@ -180,16 +156,9 @@ function deleteDrink(id, button) {
     localStorage.setItem("likedDrinks", JSON.stringify(likedDrinks));
   }
 }
-// هون بزهر عدد مشورباتي
-numberOfDrinks();
-function numberOfDrinks() {
-  const quantity = document.getElementById("quantity");
-  quantity.textContent = `${+myDrinks.length} Drinks Found`;
-  if (+myDrinks.length === 0) {
-    cards.innerHTML = `
-  <div class="w-100 text-center mt-5">
-    <h4>You haven't added any custom drinks yet!</h4>
-  </div>
-`;
-  }
-}
+
+updateDrinksCount(
+  cards,
+  myDrinks.length,
+  "You haven't added any custom drinks yet!"
+);

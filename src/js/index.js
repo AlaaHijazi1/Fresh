@@ -1,6 +1,6 @@
 const reasons = document.querySelector(".main__reasons");
 
-const Objects = [
+const reasonsData = [
   {
     icon: "bi-flower2",
     title: "100% Natural Ingredients",
@@ -21,25 +21,17 @@ const Objects = [
 window.addEventListener("load", () => {
   if (!reasons) return;
 
-  Objects.forEach((reason) => {
-    const div = document.createElement("div");
-    div.classList.add("main__reason");
-
-    const icon = document.createElement("i");
-    icon.classList.add("bi", reason.icon);
-    div.appendChild(icon);
-
-    const h3 = document.createElement("h3");
-    h3.classList.add("main__title");
-    h3.textContent = reason.title;
-    div.appendChild(h3);
-
-    const p = document.createElement("p");
-    p.classList.add("main__text");
-    p.textContent = reason.Text;
-    div.appendChild(p);
-
-    reasons.appendChild(div);
+  reasonsData.forEach((reason) => {
+    const { icon, title, Text } = reason;
+    reasons.innerHTML += `
+    <div class="main__reason">
+      <i class="bi ${icon}"></i>
+      <h3 class="main__title">${title}</h3>
+      <p class="main__text">
+        ${Text}
+      </p>
+    </div>
+    `;
   });
 });
 

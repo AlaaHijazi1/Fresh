@@ -38,6 +38,7 @@ async function get() {
     renderDrinksSubset();
     searchDrinks();
     setupDrinkLinksNavigation("alldrinks.html");
+    more_ntn.style.display = "block";
   } catch (error) {
     console.log(error);
   }

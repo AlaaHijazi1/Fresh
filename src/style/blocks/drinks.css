@@ -80,6 +80,7 @@ body {
   display: flex;
   justify-self: center;
   border-radius: 5px;
+  display: none;
 }
 
 .nav-link:hover {
